@@ -1,6 +1,6 @@
 # Warehouse Power Economy: an AI energy-manager agent
 
-This project builds an AI agent that manages a **simulated warehouse energy system**. It is inspired by Matthew Purcell's *PowerPlay* home-energy agent ([article](agent-economy.md)): every night the agent reads the state of the site and its forecasts, reasons about risk, and commits a plan for tomorrow. A nightly **counterfactual** measures what the day would have cost without the agent.
+This project builds an AI agent that manages a **simulated warehouse energy system**. It is inspired by Matthew Purcell's *PowerPlay* home-energy agent ([article](https://www.linkedin.com/pulse/my-ai-agent-saved-me-262-over-winter-kinda-matthew-purcell-hyd2c/?trackingId=TqHr4hbURwubUGv8dDL2PQ%3D%3D)): every night the agent reads the state of the site and its forecasts, reasons about risk, and commits a plan for tomorrow. A nightly **counterfactual** measures what the day would have cost without the agent.
 
 The agent has tools for:
 
