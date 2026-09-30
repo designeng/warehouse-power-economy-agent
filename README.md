@@ -1,6 +1,6 @@
-# Warehouse Power Economy: an AI energy-manager agent (tutorial)
+# Warehouse Power Economy: an AI energy-manager agent
 
-This tutorial builds an AI agent that manages a **simulated warehouse energy system**. It is inspired by Matthew Purcell's *PowerPlay* home-energy agent ([article](agent-economy.md)): every night the agent reads the state of the site and its forecasts, reasons about risk, and commits a plan for tomorrow. A nightly **counterfactual** measures what the day would have cost without the agent.
+This project builds an AI agent that manages a **simulated warehouse energy system**. It is inspired by Matthew Purcell's *PowerPlay* home-energy agent ([article](agent-economy.md)): every night the agent reads the state of the site and its forecasts, reasons about risk, and commits a plan for tomorrow. A nightly **counterfactual** measures what the day would have cost without the agent.
 
 The agent has tools for:
 
@@ -103,7 +103,7 @@ The engine is one function, `runDay(state, plan, conditions)`. It steps through 
 3. Dispatch the battery (`self_consume`, `grid_charge`, `hold`, or `discharge`), respecting the reserve and the peak-hour grid-charging ban.
 4. Enforce the import cap and the connection limit, curtail export, and price the hour.
 
-At the end of the day, stored energy (battery plus vehicles) is valued at the off-peak refill price. Without that, a one-day planner "saves money" by leaving every forklift flat for tomorrow. The first version of this tutorial's agent did exactly that.
+At the end of the day, stored energy (battery plus vehicles) is valued at the off-peak refill price. Without that, a one-day planner "saves money" by leaving every forklift flat for tomorrow. The first version of this MVP's agent did exactly that.
 
 The agent's `evaluate_plan` tool calls the same `runDay`, fed with the forecast instead of the actual day. The agent tests plans against the same rules it's scored by.
 
